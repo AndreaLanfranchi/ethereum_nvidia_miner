@@ -67,11 +67,12 @@ Do not spend long time searching and researching.
 
 I would be happy about a small donation. Thank you very much.
 
-|     | Currency | Address                                      |
-|-----|----------|----------------------------------------------|
-| ETH | Ethereum | `0xfbbc9f870bccadf8847eba29b0ed3755e30c9f0d` |
-| XBT | Bitcoin  | `13fQA3mCQPmnXBDSmfautP4VMq6Sj2GVSA`         |
-
+|     | Currency     | Address                                      |
+|-----|--------------|----------------------------------------------|
+| ETH | Ethereum     | `0x4813aEEE0c30C584C559fa8Dc7424481E2e9Fc91` |
+| BTC | Bitcoin      | `1L5ZQvqoeYY2WAGpwAkgd7f72fkHzLZ24Z`         |
+| BCH | Bitcoin Cash | `1BVw7CozPLQXW52WuxRk3d8E2nxSDTBNqg`         |
+| LTC | Litecoin     | `LKm7vt2E5B1bLdV8uzP8CWAckaUSAC4fxs`         |
 
 
 ## Installation
@@ -129,15 +130,15 @@ Be sure to select DD mode or the image will be transferred incorrectly.
 
 Identify the disk (not partition) of your USB flash drive e.g. disk3:
 
-    nils@macbookpro ~ $ diskutil list
+    user@macbookpro ~ $ diskutil list
 
 Unmount your USB flash drive:
 
-    nils@macbookpro ~ $ diskutil unmountDisk /dev/disk3
+    user@macbookpro ~ $ diskutil unmountDisk /dev/disk3
 
 Copy the image to your USB flash drive:
 
-    nils@macbookpro ~ $ sudo dd bs=1m if=Downloads/ethereum-ubuntu-nvidia-miner_v3.img of=/dev/rdisk3
+    user@macbookpro ~ $ sudo dd bs=1m if=Downloads/ethereum-ubuntu-nvidia-miner_v3.img of=/dev/rdisk3
 
 Btw. `rdisk3` (with r) not `disk3` is not a write error.
 
@@ -154,7 +155,7 @@ The network configuration is done by DHCP. Look in your router which IP your min
 
 Connect via SSH with your miner.
 
-    nils@macbookpro ~ $ ssh prospector@minerIP
+    user@macbookpro ~ $ ssh prospector@minerIP
 
 Credentials. Password should be changed (`passwd`):
 
@@ -278,7 +279,7 @@ On Windows, you can use [FileZilla](https://filezilla-project.org/) or [WinSCP](
 On Linux and macOS it works like this:
 
 ```
-nils@macbookpro ~ $ scp "Claymore's Dual GPU Miner - LINUX.tar.gz" prospector@minerIP:/home/prospector/
+user@macbookpro ~ $ scp "Claymore's Dual GPU Miner - LINUX.tar.gz" prospector@minerIP:/home/prospector/
 ```
 
 Unpack the tar.gz file into the `~/claymore-dual-miner` folder:
@@ -315,7 +316,7 @@ On Windows, you can use [FileZilla](https://filezilla-project.org/) or [WinSCP](
 On Linux and macOS it works like this:
 
 ```
-nils@macbookpro ~ $ scp "Zec Miner Linux Bin.tar.gz" prospector@minerIP:/home/prospector/
+user@macbookpro ~ $ scp "Zec Miner Linux Bin.tar.gz" prospector@minerIP:/home/prospector/
 ```
 
 Unpack the tar.gz file into the `~/zcash-mining/ewbf/` folder:
